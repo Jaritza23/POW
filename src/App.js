@@ -1,12 +1,16 @@
 import Navegacion from './components/Navegacion';
 import Saludo from './components/Saludo';
 import ListTiendas from './components/ListTiendas';
+import Numero from './components/Numero';
 
 function App() {
   return (
     <div>
-      <Navegacion />
-      <ListTiendas />
+      <Numero valor="5"/>
+      {/*
+        <Navegacion />
+        <ListTiendas />
+   */} 
     </div>
   );
 }
