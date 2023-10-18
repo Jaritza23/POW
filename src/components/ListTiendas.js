@@ -1,20 +1,18 @@
-import dataTienda from '../data/Tienda';
 import Tienda from './Tienda';
 
-function ListTiendas()
+function ListTiendas(props)
 {
-    let listTiendas = dataTienda.map(element => {
+    let listTiendasRendered = props.elements.map(element => {
         return <Tienda 
-                    name={element.Name}
-                    year={element.Year}
-                    description={element.Description}
-                    poster={element.Poster}
+                    key={element.Id}
+                    value = {element}
+                    fnAddFavorites={props.fnAddFavorites}
                 />    
     })
 
     return(
         <div className='row'>
-        {listTiendas}
+        {listTiendasRendered}
     </div>
     );
     
